@@ -1,0 +1,354 @@
+/* 1. RESET
+----------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size:100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+
+
+/* 2. ROOT
+----------------------------------------------------------------------------------------*/
+html {
+  overflow-y: scroll;
+  background: rgb(244, 244, 244);
+  }
+
+/* /ht Ethan Marcotte - http://front.ie/l8rJaA */
+img, embed, object, video { max-width: 100%; }
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { width: 100%; }
+
+/* 3. CORE TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1em;
+  line-height: 1.618em;
+  color: #333;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.809em;
+  line-height: 1em;
+  }
+
+p, ul, ol, dl, blockquote {
+    font-size: 1em;
+    line-height: 1.618em;
+    margin-bottom: 1.618em;
+    max-width: 30em; /* Optimal width for long-form text */
+  }
+
+ul { list-style-type: disc; margin-left: 1.618em; }
+ol { list-style-type: decimal; margin-left: 1.618em; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0;}
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+small { font-size: 80%; }
+
+
+/* 4. LINKS
+----------------------------------------------------------------------------------------*/
+a:hover { outline: none; text-decoration:none; }
+a:active, a:focus { outline: none; }
+
+a:visited {
+  color: #444;
+}
+
+a.link_to {
+  padding-left: 10px;
+  color: #439BBD;
+}
+
+/* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+h1 {
+  text-align: center;
+  font-size: 2.618em;
+  line-height: 1.2em;
+  }
+
+h3 { text-transform:uppercase; letter-spacing:0.12em; }
+h3, h4, h5, h6 { font-weight: bold; }
+
+p.intro { font-size: 1.309em; margin-bottom: 1em; }
+
+header { text-align:center; }
+
+footer {
+  margin:1.618em 0 0;
+  padding: 1.618em 0 0;
+  border-top: 1px solid rgb(102,102,102);
+  border-bottom: 1px solid rgb(102,102,102);
+  }
+
+footer p { float: left; margin-right:1em; }
+
+
+/* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+----------------------------------------------------------------------------------------*/
+
+header img #header-logo { margin-bottom:-0.809em; }
+
+header h2:before {
+  content:"";
+  border-top:1px solid #333;
+  height: 1.618em;
+  width: 35%;
+  display: block;
+  float: left;
+}
+
+header h2:after {
+  content:"";
+  border-top:1px solid #333;
+  height: 1.618em;
+  width: 35%;
+  display: block;
+  float: right;
+}
+
+#container {
+    padding: 0.809em;
+    max-width: 30em;
+    margin: auto;
+  }
+
+aside { width: 100%; }
+
+aside ul {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+aside ul li {
+  display: block;
+}
+
+aside ul li a {
+  display: inline-block;
+  padding: 0 8px;
+  color: #439BBD;
+  font-size: 17px;
+}
+
+aside h3 {
+  display: block;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+footer p { max-width: 17.942em; }
+
+
+
+/* 7. BROWSER AND NON-SEMANTIC STYLING
+----------------------------------------------------------------------------------------*/
+.cf:before, .cf:after { content: ""; display: block; }
+.cf:after { clear: both; }
+.ie6 .cf { zoom: 1 }
+
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+----------------------------------------------------------------------------------------*/
+
+@media all and (min-width: 33.236em) {
+
+#container {
+	padding: 1.618em;
+	margin: 0 auto;
+	max-width: 60em;
+	}
+
+header h2:before, header h2:after {
+  width: 27%;
+  margin-top: 0.618em;
+}
+
+header h2 a {
+  font-size: 16px;
+  display: inline-block;
+  padding: 0 9px;
+  margin:0;
+  color: #444444;
+}
+
+h1 { font-size: 4.4em; line-height:1.618em; margin-bottom:0.1em; }
+
+h1 span {
+  font-family: "proxima-nova-1","proxima-nova-2", arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing:0.1em;
+  font-size:0.382em;
+  line-height:3.236em;
+  display:block;
+  }
+
+h1 span:before, h1 span:after {
+  content:"";
+  border-top:1px solid #333;
+  height: 0.1em;
+  width: 30%;
+  display: block;
+  margin-top: 1.618em;
+  }
+
+h1 span:before { float: left; }
+h1 span:after { float: right; }
+
+ul { margin-left: 0.4em; }
+ol { margin-left: 0.4em; }
+
+li {
+  list-style-type: none;
+  padding: 1px 3px;
+}
+
+p.intro {
+  font-size: 1.618em;
+  line-height:1.4289em;
+  max-width: 22em;
+  margin-bottom: 1em;
+  }
+
+p {
+  max-width: 36em;
+}
+
+aside {
+  float: right;
+  clear: right;
+  width: 15em;
+  margin-top: 0em;
+  height:auto;
+
+}
+
+#comments {
+  max-width: 35.3em;
+}
+
+#comments p {
+  padding: 10px 0;
+  margin: 0;
+
+}
+
+#comments hr {
+  border-top: 1px solid #bbb;
+  margin: 30px 7px;
+}
+
+input[type="text"] {
+  padding: 8px 15px;
+  font-size: 14px;
+  width: 70%;
+}
+
+input.name {
+  width: 40%;
+}
+
+input[type="submit"] {
+  padding: 10px;
+}
+
+.pagination {
+  text-align: center;
+  padding: 1.5em;
+  cursor: default;
+  font-size: 16px;
+  font-family: Arial;
+}
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 12px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.pagination a:hover, .pagination a:focus { text-decoration: underline; }
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 30em) and (max-width: 63.236em) {
+
+#container { width: 30em; }
+
+header h2:before, header h2:after { width: 7%; }
+
+h1 { font-size: 2.618em; line-height: 1.4em; }
+h1 span { font-size:0.5em; }
+h1 span:before, h1 span:after { width: 20%; }
+
+p.intro {
+  font-size: 1.309em;
+  margin-bottom: 1em;
+  max-width: 33em;
+  }
+
+
+
+aside {
+  float: none;
+  width: auto;
+  height: auto;
+  margin: 0 0 2.2em;
+  }
+
+aside ul {
+  width: 80%;
+  margin:0px auto;
+  text-align: center;
+}
+
+aside ul li {
+  display: inline;
+}
+
+aside ul li a {
+  display: inline-block;
+  padding: 0 5px;
+  color: #439BBD;
+}
+
+aside h3 {
+  display: none;
+}
+
+.article h3 {
+  font-size: 14px;
+}
+
+}
+}

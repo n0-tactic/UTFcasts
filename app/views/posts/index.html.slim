@@ -1,0 +1,7 @@
+- @posts.each do |i|
+  div.article
+    p
+      h3 = i.title
+    p
+      = i.article.slice(0, i.need_symbols).html_safe
+      = link_to 'Читать дальше', "/#{@category.where(id: i.category_id).first.alias}/#{i.id}", class: 'link_to'

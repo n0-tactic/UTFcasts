@@ -1,0 +1,74 @@
+form {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+tr {
+  border-top: 1px solid #ddd;
+}
+
+.title {
+  width: 60%;
+}
+
+.edit, .delete {
+  width: 15%;
+}
+
+.count {
+  width: 10%;
+}
+
+.del, .time, .name {
+  padding: 10px;
+}
+.name {
+  padding-left: 0;
+}
+
+.new_category {
+  width: 500px;
+  margin: auto;
+  text-align: left;
+  margin-top: 60px;
+  padding-left: 100px;
+}
+
+@media screen and (min-width: 30em) and (max-width: 63.236em) {
+
+tr {
+  text-align: left;
+}
+
+.title {
+  width: 100%;
+  display: block;
+}
+
+.edit {
+  padding: 0 10px 0 0;
+  display: inline-block;
+}
+
+.delete {
+  padding: 0 0 0 10px;
+  display: inline-block;
+}
+
+.edit a, .delete a {
+  color: #439BBD;
+}
+
+.count {
+  float: right;
+  padding: 0 10px;
+  display: inline-block;
+}
+}

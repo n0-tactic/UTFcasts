@@ -1,0 +1,36 @@
+= form_for @post do |f|
+  p
+    |Заголовок:
+    br
+    = f.text_field :title
+  p
+    |Категория
+    br
+    = f.select(:category_id, options_from_collection_for_select(@categories, :id, :title))
+  p
+    |Текст:
+    br
+    = f.text_area :article
+  p
+    |Текст на главной
+    br
+    = f.text_area :need_symbols, size: "81x5"
+  p
+    = f.submit "Сохранить"
+
+javascript:
+  $("#post_article").keydown(function(e) {
+    if(e.keyCode === 9) {
+      var start = this.selectionStart;
+      var end = this.selectionEnd;
+
+      var $this = $(this);
+      var value = $this.val();
+
+      $this.val(value.substring(0, start) + "\t" + value.substring(end));
+
+      this.selectionStart = this.selectionEnd = start + 1;
+
+      e.preventDefault();
+    }
+  });

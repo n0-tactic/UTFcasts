@@ -1,0 +1,51 @@
+doctype html
+html.no-js
+  head
+    title ASCII casts на русском
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "zenburn", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "jquery.jscrollpane", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "modernizr", "data-turbolinks-track" => true
+    = javascript_include_tag "highlight.pack", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "jquery.jscrollpane.min", "data-turbolinks-track" => false
+    meta charset="utf-8"
+    meta http-equiv="cleartype" content="on"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    javascript:
+      var d = $(document);
+      d.ready(function(){
+        hljs.initHighlightingOnLoad();
+
+        var check = 0
+        d.on("load", function(){
+          $(".scroll").jScrollPane();
+        });
+      });
+
+
+  body
+    div#container.cf
+      article
+        header
+          h2
+            = link_to 'Главная', '/'
+            = link_to 'Новости', '#2'
+            = link_to 'Контакты', '#3'
+            = link_to 'О проекте', '#4'
+          h1
+            | UTFcasts.ru
+            span Rails - Это просто
+        div#main.cf role="main"
+          aside
+            h3 Категории:
+            ul
+              - @categories.each do |i|
+                li = link_to i.title, "/category/#{i.alias}"
+          =yield
+      footer.cf
+        p
+          |UTFcasts.ru
+          br
+          |2013

@@ -1,0 +1,13 @@
+p
+  h3
+    = @post.title
+p
+  = @post.article.html_safe
+
+
+p.berad
+  =link_to 'На главную', root_path
+  =link_to @category.title, @category
+
+
+= render partial: "comments"

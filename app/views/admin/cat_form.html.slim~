@@ -1,0 +1,11 @@
+= form_for @category, class: "centered" do |f|
+  p
+    |Заголовок:
+    br
+    = f.text_field :title
+  p
+    |Адрес:
+    br
+    = f.text_field :alias
+  p
+    = f.submit "Сохранить"

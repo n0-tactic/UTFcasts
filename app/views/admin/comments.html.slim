@@ -1,0 +1,14 @@
+- if @comments.empty?
+  b
+    = 'Нет комментариев к этой записи. '
+else
+  - @comments.each do |i|
+    table
+      tr
+        td
+          b.name    = i.author
+          span.time = i.created_at
+          span.del  = link_to 'Удалить', "/admin/comment/#{i.id}", method: :delete, data: { confirm: "Удалить?"}
+          br
+          = i.comment
+=link_to 'Назад', action: :index 

@@ -1,0 +1,11 @@
+- if @posts.empty?
+  p.intro
+    | Эта категория пуста
+- else
+  - @posts.each do |i|
+    div.article
+      p
+        h3 = i.title
+      p
+        = i.article.slice(0, i.need_symbols).html_safe
+        = link_to 'Читать дальше', "/#{@category.alias}/#{i.id}", class: 'link_to'

@@ -1,0 +1,33 @@
+doctype html
+html.no-js
+  head
+    title ASCII casts на русском
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "admin", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "modernizr", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    meta charset="utf-8"
+    meta http-equiv="cleartype" content="on"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+  body
+    div#container.cf
+      article
+        header
+          h2
+            = link_to 'Добавить статью', new_post_path
+            | &nbsp; / &nbsp;
+            = link_to 'Добавить категорию', new_category_path
+          h1
+            | Я мего одмен
+          h2
+            = link_to 'Все категории', categories_path
+            = link_to 'Все посты', admin_path
+
+          br
+        =yield
+
+      footer.cf
+        p = link_to 'Выход', logout_path
