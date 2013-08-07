@@ -1,9 +1,0 @@
-- @posts.each do |i|
-  table
-    tr
-      td
-        = link_to i.title, post_path(i)
-      td
-        = link_to 'Удалить', post_path(i), method: :delete, data: { confirm: "Удалить #{i.title}?"}
-      td
-        = link_to 'Редактировать', edit_post_path(i)
