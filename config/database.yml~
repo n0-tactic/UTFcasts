@@ -19,12 +19,25 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  host: localhost
-  port: 5432
+<<<<<<< HEAD
+  adapter:  postgresql
+  host:     localhost
+  port:     5432
+  username: deploy
+  password: JXot7vP0Pvo5IXlc
+  database: mydb
+  schema_search_path: public
+  encoding: utf-8
+=======
+  adapter : postgresql
+  host    : localhost
+  posrt   : 5432
   username: our_username
   password: our_password
-  database: our_base
   encoding: utf-8
+  
+  database: our_base
+  
+>>>>>>> f918218eb75ac9a564a7d0927f6783e02acdfa94
   pool: 5
   timeout: 5000

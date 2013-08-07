@@ -1,8 +1,0 @@
-class Comment < ActiveRecord::Base
-
-  attr_accessible :author, :comment, :post_id
-
-  validates :author, :comment, presence: true
-
-  belongs_to :post
-end
