@@ -4,7 +4,6 @@ html.no-js
     title ASCII casts на русском
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = stylesheet_link_tag    "zenburn", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "modernizr", "data-turbolinks-track" => true
     = javascript_include_tag "highlight.pack", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     meta charset="utf-8"

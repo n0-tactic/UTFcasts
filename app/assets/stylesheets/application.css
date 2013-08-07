@@ -299,16 +299,17 @@ input[type="submit"] {
 
 .pagination a:hover, .pagination a:focus { text-decoration: underline; }
 
+}
 /* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
 ----------------------------------------------------------------------------------------*/
-@media screen and (min-width: 30em) and (max-width: 63.236em) {
+@media all and (min-width: 30em) and (max-width: 63.236em) {
 
 #container { width: 30em; }
 
 header h2:before, header h2:after { width: 7%; }
 
 h1 { font-size: 2.618em; line-height: 1.4em; }
-h1 span { font-size:0.5em; }
+h1 span { font-size:0.5em; display: block; }
 h1 span:before, h1 span:after { width: 20%; }
 
 p.intro {
@@ -316,8 +317,6 @@ p.intro {
   margin-bottom: 1em;
   max-width: 33em;
   }
-
-
 
 aside {
   float: none;
@@ -349,6 +348,9 @@ aside h3 {
 .article h3 {
   font-size: 14px;
 }
-
 }
+
+@media all and (max-width: 30em) {
+  header h2:before, header h2:after { width: 0%; }
+
 }
