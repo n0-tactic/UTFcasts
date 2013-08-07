@@ -28,7 +28,7 @@ Forum::Application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  config.assets.precompile = ['highlight.pack.js', 'modernizr.js', 'admin.css', 'zenburn.css']
+  config.assets.precompile = ['application.js', 'highlight.pack.js', 'modernizr.js', 'application.css', 'admin.css', 'zenburn.css']
   # Generate digests for assets URLs.
   config.assets.digest = true
 
